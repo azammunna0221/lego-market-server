@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const app =express();
 require('dotenv').config();
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const port = process.env.PORT || 3000;
 
 
@@ -35,6 +35,12 @@ async function run() {
       const result = await cursor.toArray()
       res.send(result); 
     })
+    app.get ('/clients/:id', async(req , res) =>{
+        const id = req.params.id;
+        const query = {_id : new ObjectId(id)}
+        const result = await clientsCollection.findOne(query)
+        res.send(result);
+      })
 
     app.post('/clients' , async(req, res)=>{
         const clients = req.body;
@@ -43,6 +49,12 @@ async function run() {
         res.send(result);
     }),
 
+    app.delete('/clients/:id', async(req, res) =>{
+      const id = req.params.id;
+      const query = {_id : new ObjectId(id)};
+      const result = await clientsCollection.deleteOne(query);
+      res.send(result);
+    })
 
 
     // Send a ping to confirm a successful connection
