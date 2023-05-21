@@ -1,0 +1,62 @@
+[
+    {
+        "category": "Lego-Classic",
+        "category_img":"https://www.lego.com/cdn/cs/set/assets/blt10bc479f5df0bcde/11020.png?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5" ,
+        "items": [
+            {
+                "id": "1qwerty",
+                "image": "https://www.lego.com/cdn/cs/set/assets/blt2c59275a2eca5e2b/11028_alt2.png?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5",
+                "name": "Creative Pastel Fun",
+                "price": 19.99,
+                "ratings": 4.5
+            },
+            {
+                "id": "245er",
+                "image": "https://www.lego.com/cdn/cs/set/assets/blt53aa1af2f45d72e8/11022_alt1.png?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5",
+                "name": "Space Mission",
+                "price": 29.99,
+                "ratings": 4.2
+            }
+        ]
+    },
+    {
+        "category": "Lego-City",
+        "category_img": "https://www.lego.com/cdn/cs/set/assets/blt2b163a472ef2e61f/21338.png?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5",
+        "items": [
+            {
+                "id": "398765gh",
+                "image": "https://www.lego.com/cdn/cs/set/assets/bltb7c2148d3e4a0b8c/31138.png?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5",
+                "name": "Beach Camper Van",
+                "price": 24.99,
+                "ratings": 4.8
+            },
+            {
+                "id": "423ytre",
+                "image": "https://www.lego.com/cdn/cs/set/assets/bltb24e963aed6f6a78/60374.png?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5",
+                "name": "Fire Command Truck",
+                "price": 14.99,
+                "ratings": 4.0
+            }
+        ]
+    },
+    {
+        "category": "Lego-Disney",
+        "category_img": "https://www.lego.com/cdn/cs/set/assets/blt6c66b53c109d5f50/40478_alt4.jpg?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5",
+        "items": [
+            {
+                "id": "587vbn",
+                "image": "https://www.lego.com/cdn/cs/set/assets/blt91803d075e193ca8/10998.png?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5",
+                "name": "3in1 Magical Castle",
+                "price": 39.99,
+                "ratings": 4.7
+            },
+            {
+                "id": "6098bn",
+                "image": "https://www.lego.com/cdn/cs/set/assets/blt327f70e2e911da45/43214_alt1.png?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5",
+                "name": "Twirling Rapunzel",
+                "price": 49.99,
+                "ratings": 4.9
+            }
+        ]
+    }
+]
