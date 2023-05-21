@@ -35,12 +35,13 @@ async function run() {
       const result = await cursor.toArray()
       res.send(result); 
     })
-    app.get ('/clients/:id', async(req , res) =>{
-        const id = req.params.id;
-        const query = {_id : new ObjectId(id)}
-        const result = await clientsCollection.findOne(query)
-        res.send(result);
-      })
+
+    app.get('/clients/:id', async(req, res)=>{
+      const id = req.params.id;
+      const query = {_id : new ObjectId(id)}
+      const result = await clientsCollection.findOne(query)
+      res.send(result);
+    })
 
     app.post('/clients' , async(req, res)=>{
         const clients = req.body;
@@ -48,6 +49,27 @@ async function run() {
         const result = await clientsCollection.insertOne(clients);
         res.send(result);
     }),
+
+    app.put('/clients/:id', async(req, res)=>{
+      const id = req.params.id;
+      const updated= req.body;
+      const filter = {_id : new ObjectId(id)}
+      const options = {upsert : true}
+      const updateData = {
+        $set : {
+          name : updated.name,
+          email : updated.email,
+          url: updated.url,
+          price : updated.price,
+          rating : updated.rating,
+          quantity: updated.quantity,
+          description: updated.description,
+        }
+      }
+      const result = await clientsCollection.updateOne(filter, updateData, options);
+      res.send(result);
+    })
+
 
     app.delete('/clients/:id', async(req, res) =>{
       const id = req.params.id;
