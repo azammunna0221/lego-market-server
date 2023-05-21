@@ -1,4 +1,5 @@
 const express = require('express');
+const categoryData = require('./data/data.json');
 const cors = require('cors');
 const app =express();
 require('dotenv').config();
@@ -10,7 +11,9 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-//console.log(process.env.DB_PASS);
+app.get('/category', (req ,res)=>{
+  res.send(categoryData);
+})
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.jwmpqqv.mongodb.net/?retryWrites=true&w=majority`;
 

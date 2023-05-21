@@ -1,5 +1,6 @@
 [
     {
+        "_id" : "7rty",
         "category": "Lego-Classic",
         "category_img":"https://www.lego.com/cdn/cs/set/assets/blt10bc479f5df0bcde/11020.png?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5" ,
         "items": [
@@ -20,6 +21,7 @@
         ]
     },
     {
+        "_id" : "4rty",
         "category": "Lego-City",
         "category_img": "https://www.lego.com/cdn/cs/set/assets/blt2b163a472ef2e61f/21338.png?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5",
         "items": [
@@ -40,6 +42,7 @@
         ]
     },
     {
+        "_id" : "8rty",
         "category": "Lego-Disney",
         "category_img": "https://www.lego.com/cdn/cs/set/assets/blt6c66b53c109d5f50/40478_alt4.jpg?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5",
         "items": [
