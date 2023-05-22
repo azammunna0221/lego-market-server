@@ -25,7 +25,7 @@ app.get('/category', (req ,res)=>{
 
 app.get('/category/:id', (req, res)=>{
   const id = req.params.id;
-  const selected = categoryData.map(c => c._id == id);
+  const selected = categoryData.find(c => c.id == id);
   res.send(selected);
 })
 
