@@ -8,6 +8,14 @@ const port = process.env.PORT || 3000;
 
 
 //MIDDLE WARE 
+const corsConfig = {
+  origin: '',
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE']
+}
+app.use(cors(corsConfig));
+app.options("" , cors(corsConfig));
+
 app.use(cors());
 app.use(express.json());
 
@@ -29,7 +37,7 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
+    //await client.connect();
 
     const clientsCollection = client.db("DBinsert").collection('clients');
 
@@ -69,7 +77,7 @@ async function run() {
           description: updated.description,
         }
       }
-      const result = await clientsCollection.updateOne(filter, updateData, options);
+    const result = await clientsCollection.updateOne(filter, updateData, options);
       res.send(result);
     })
 
